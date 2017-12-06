@@ -20,6 +20,10 @@ public class WSChampionshipServiceImpl implements WSChampionshipService {
 		Integer years[] = { 2014, 2010, 2006, 2002, 1998, 1994, 1990, 1986, 1932, 1978, 1974, 1970, 1966, 1962, 1958,
 				1954, 1950, 1938, 1934, 1930 };
 
+		String countries[] = { "Brasil", "Sudáfrica", "Alemania", "Japón", "Francia", "Estados Unidos", "Italia",
+				"México ", "España", "Argentina", "Alemania", "México", "Inglaterra", "Chile", "Suecia", "Suiza",
+				"Brasil", "Francia", "Italia", "Uruguay" };
+
 		String winners[] = { "Alemania", "España", "Italia", "Brasil", "Francia", "Brasil", "Alemania", "Argentina",
 				"Italia", "Argentina", "Alemania", "Brasil", "Inglaterra", "Brasil", "Brasil", "Alemania", "Uruguay",
 				"Italia", "Italia", "Uruguay" };
@@ -40,7 +44,7 @@ public class WSChampionshipServiceImpl implements WSChampionshipService {
 		logger.info("###=> Iniciando Servicio WSChampionService - data DUMMY");
 
 		for (int i = 0; i < years.length; i++) {
-			value = new WSChampionship(i, years[i], winners[i], lossers[i], results[i]);
+			value = new WSChampionship(i, years[i], countries[i], winners[i], lossers[i], results[i]);
 			data.add(value);
 		}
 

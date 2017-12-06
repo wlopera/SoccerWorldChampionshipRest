@@ -11,6 +11,7 @@ public class WSChampionship implements Serializable {
 
 	private Integer id;
 	private int year;
+	private String country;
 	private String winner;
 	private String losser;
 	private String result;
@@ -29,6 +30,14 @@ public class WSChampionship implements Serializable {
 
 	public void setYear(int year) {
 		this.year = year;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	public String getWinner() {
@@ -59,10 +68,11 @@ public class WSChampionship implements Serializable {
 		super();
 	}
 
-	public WSChampionship(Integer id, int year, String winner, String losser, String result) {
+	public WSChampionship(Integer id, int year, String country, String winner, String losser, String result) {
 		super();
 		this.id = id;
 		this.year = year;
+		this.country = country;
 		this.winner = winner;
 		this.losser = losser;
 		this.result = result;
@@ -70,8 +80,8 @@ public class WSChampionship implements Serializable {
 
 	@Override
 	public String toString() {
-		return "SoccerWorldChampionship [id=" + id + ", year=" + year + ", winner=" + winner + ", losser=" + losser
-				+ ", result=" + result + "]";
+		return "SoccerWorldChampionship [id=" + id + ", year=" + year + ", country=" + country + ", winner=" + winner
+				+ ", losser=" + losser + ", result=" + result + "]";
 	}
 
 }
